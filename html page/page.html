@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character set declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Professional Community Platform</title> <!-- Page title -->
+    <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS stylesheet -->
+</head>
+<body>
+    <div id="loginPage" class="login-container"> <!-- Container for login page -->
+        <div class="title-container">
+            <h1>Welcome to your most-used-queries interface!</h1> <!-- Welcome message -->
+        </div>
+        <form method="POST" action="" id="loginForm"> <!-- Login form -->
+            <div class="input-group">
+                <label for="email">Email or phone</label> <!-- Label for email/phone input -->
+                <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email or phone"
+                    required
+                /> <!-- Email/phone input field -->
+            </div>
+            <div class="input-group password-container">
+                <label for="password">Password</label> <!-- Label for password input -->
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                /> <!-- Password input field -->
+                <button type="button" id="toggle-password">Show</button> <!-- Button to toggle password visibility -->
+            </div>
+            <div class="input-group" id="wrong-password-message" style="display: none; color: red;">
+                Wrong password
+            </div> <!-- Message displayed for wrong password -->
+            <a href="#" class="forgot-password" id="forgot-password-link">Forgot password?</a> <!-- Forgot password link -->
+            <button type="submit">Sign in</button> <!-- Sign in button -->
+            <button type="button" id="reset-button" style="display: none;">Reset</button> <!-- Reset button -->
+            <button type="button" id="back2-button" style="display: none;">Back</button> <!-- Back button -->
+        </form>
+    </div>
+    <div id="postLoginPage" class="main-container" style="display:none;"> <!-- Container for post-login page -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" class="sidebar-item" data-queries="query1,query2,query3" data-name="Accounts">Accounts</a></li>
+                <li><a href="#" class="sidebar-item" data-queries="query4,query5,query6" data-name="Properties">Properties</a></li>
+                <li><a href="#" class="sidebar-item" data-queries="query7,query8,query9" data-name="Transactions">Transactions</a></li>
+            </ul>
+        </nav> <!-- Sidebar navigation with query categories -->
+        <div class="main-content">
+            <div class="top-frame">
+                <button id="logout-button">Log out</button> <!-- Log out button -->
+            </div>
+            <h2 id="login-message">Successful login</h2> <!-- Login success message -->
+            <p id="select-data-message">Please select the data you want to view</p> <!-- Prompt to select data -->
+            <h2 id="viewing-message" style="display:none;">You are viewing <span id="viewing-name"></span> queries:</h2>
+            <h2 id="viewing-name-alone" style="display:none;"></h2>
+            <p id="select-query-message" style="display:none;">Select the query you want to view</p>
+            <div id="query-buttons"></div> <!-- Container for query buttons -->
+            <h2 id="query-viewing-message" style="display:none;">You are viewing <span id="query-name"></span></h2>
+            <h3 id="table-title" style="display:none;"></h3>
+            <div id="query-table-container" class="table-container">
+                <div id="query-table-wrapper" class="table-wrapper">
+                    <div id="query-table" class="table-scrollable"></div>
+                </div>
+            </div> <!-- Container for query results table -->
+            <button id="back-button" style="display:none;">Back</button> <!-- Back button for query view -->
+        </div>
+    </div>
+    <div id="logoutMessage" class="logout-container" style="display:none;">
+        <h2>Successful Logout</h2>
+        <h3>Redirecting in <span id="countdown">3</span> seconds...</h3>
+    </div> <!-- Logout message container -->
+    <script src="login.js"></script> <!-- Linking external JavaScript file -->
+</body>
+</html>

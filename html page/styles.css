@@ -1,0 +1,572 @@
+.top-frame {
+    position: fixed; /* Fix the top frame to the top */
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+} /* Styles for the top frame and logout button */
+
+#logout-button {
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 20%;
+    max-width: 100px;
+    text-align: center;
+} /* Styles for the logout button */
+
+#logout-button:hover {
+    background-color: #005f8d;
+} /* Hover effect for the logout button */
+
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+} /* Styles for the logout container */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+} /* Base styles for body to ensure proper font and layout */
+
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
+} /* Styles for title and subtitle for clarity and emphasis */
+
+h1 {
+    color: #333;
+    font-size: 24px;
+} /* Styles for the main title */
+
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 300px; /* Default maximum width for small screens */
+    margin: auto;
+    position: relative;
+} /* Login container styling for form isolation and aesthetics */
+
+h2 {
+    text-align: center;
+    color: #333;
+} /* Section heading within login form for clear section demarcation */
+
+p {
+    text-align: center;
+    color: #555;
+} /* Paragraph styling */
+
+.input-group {
+    margin-bottom: 20px;
+} /* Input group styling for visual grouping of label and input */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+} /* Label styling for better user guidance */
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+} /* Input styling for emphasis and accessibility */
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073b1;
+    color: white;
+    cursor: pointer;
+} /* Button styling for interaction */
+
+button:hover {
+    background-color: #005f8d;
+} /* Button hover effect for visual feedback */
+
+.forgot-password {
+    color: #0073b1;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+} /* Forgot password link styling */
+
+.forgot-password:hover {
+    text-decoration: underline;
+} /* Hover effect for forgot password link */
+
+.password-container {
+    position: relative;
+    width: 100%;
+} /* Password container styling for the show/hide password button */
+
+#toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 65%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #0073b1;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    line-height: normal;
+    width: 10%; /* Set width to 10% of the parent container */
+} /* Toggle password button styling */
+
+#reset-button {
+    background-color: red;
+    color: white;
+    display: none;
+} /* Styles for the reset button */
+
+#back2-button {
+    background-color: lightblue;
+    color: black;
+    display: none;
+} /* Styles for the back2 button */
+
+#wrong-password-message {
+    color: red;
+    display: none;
+} /* Add styles for the wrong password message */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+} /* Responsive styling for sidebar in post-login layout */
+
+.sidebar {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+} /* Sidebar styling */
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+} /* Sidebar list styling */
+
+.sidebar ul li {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+} /* Sidebar list item styling */
+
+.sidebar ul li + li::before {
+    content: '';
+    border-left: 1px solid #444;
+    height: 100%;
+    position: absolute;
+    left: -1px;
+    top: 0;
+} /* Sidebar item separator */
+
+.sidebar ul li:first-child::before {
+    content: none;
+} /* Remove separator for the first item */
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+    transition: background 0.3s;
+} /* Sidebar link styling */
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+} /* Hover effect for sidebar links */
+
+.main-content {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+} /* Main content styling */
+
+.query-button {
+    width: 15%;
+    min-width: 80px;
+    padding: 10px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+} /* Styles for query buttons */
+
+.query-button:hover {
+    background-color: #005f8d;
+} /* Hover effect for query buttons */
+
+#query-buttons {
+    display: table;
+    width: 100%;
+    max-width: 800px;
+    table-layout: fixed;
+    margin: 10px auto;
+} /* Center the container holding the query buttons */
+
+.query-row {
+    display: table-row;
+} /* Styling for query rows */
+
+.query-description,
+.query-button-cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px;
+} /* Styling for query description and button cells */
+
+.query-description {
+    width: 85%;
+    text-align: left;
+    padding-left: 10px;
+} /* Query description styling */
+
+.query-button-cell {
+    width: 15%;
+    padding-right: 10px;
+} /* Query button cell styling */
+
+#viewing-message,
+#select-query-message {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 10px auto; 
+    text-align: center;
+} /* Center the messages above the table */
+
+#select-query-message::after {
+    content: "\A\A";
+    white-space: pre; /* Adding two new empty lines */
+} /* Adding extra space after the select query message */
+
+#back-button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    align-self: center;
+} /* Styles for back button */
+
+#back-button:hover {
+    background-color: #005f8d;
+} /* Hover effect for back button */
+
+@media (max-width: 768px) {
+    .main-container {
+        padding-top: 50px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .sidebar ul li {
+        border-bottom: none;
+    }
+
+    .sidebar ul li::before {
+        content: none;
+    }
+
+    .sidebar ul li + li::before {
+        content: '';
+        border-left: 1px solid #444;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .query-description {
+        width: 70%;
+        padding-left: 10px;
+    }
+
+    .query-button-cell {
+        width: 15%;
+        padding-right: 10px;
+    }
+
+    .query-button {
+        width: 15%;
+    }
+
+    #viewing-message,
+    #select-query-message {
+        width: 90%;
+    }
+} /* Responsive adjustments for small devices */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .sidebar ul li {
+        border-bottom: 1px solid #444;
+        width: 100%;
+    }
+
+    .sidebar ul li::before {
+        content: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .query-description {
+        width: 70%;
+        padding-left: 10px;
+    }
+
+    .query-button-cell {
+        width: 15%;
+        padding-right: 10px;
+    }
+
+    .query-button {
+        width: 15%;
+    }
+
+    #viewing-message,
+    #select-query-message {
+        width: 90%;
+    }
+
+    .login-container {
+        max-width: 450px; /* Medium screen max width */
+    }
+} /* Responsive adjustments for medium devices */
+
+@media (min-width: 1025px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 30%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 70px; /* Adjusting for the top frame height */
+    }
+
+    .sidebar ul {
+        display: block;
+    }
+
+    .sidebar ul li {
+        border-bottom: 1px solid #444;
+    }
+
+    .sidebar ul li + li::before {
+        content: none;
+    }
+
+    .main-content {
+        margin-left: 30%;
+        padding: 20px;
+    }
+
+    .query-button {
+        width: 300%; /* Doubled the width */
+        padding: 20px; /* Doubled the padding */
+    }
+
+    .query-button-cell {
+        padding-right: 50px; /* Added 50px padding */
+    }
+
+    #viewing-message,
+    #select-query-message,
+    #query-buttons {
+        width: 90%;
+        max-width: none;
+        margin: 0 auto 10px auto;
+        text-align: center;
+    }
+
+    .login-container {
+        max-width: 600px; /* Large screen max width */
+    }
+} /* Responsive adjustments for large screens */
+
+.table-container {
+    overflow-x: auto;
+    position: relative;
+    max-width: 100%;
+} /* Styles for the query table container and fixed column */
+
+.table-wrapper {
+    display: inline-block;
+    min-width: 100%;
+} /* Table wrapper styling */
+
+.table-scrollable {
+    width: 100%;
+    overflow-x: auto;
+} /* Table scrollable container styling */
+
+.table-scrollable table {
+    width: 100%;
+    border-collapse: collapse;
+} /* Table styling */
+
+.table-scrollable th, .table-scrollable td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+} /* Table cell styling */
+
+.table-scrollable th:first-child, .table-scrollable td:first-child {
+    position: sticky;
+    left: 0;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+} /* Fixed column styling */
+
+@media (max-width: 768px) {
+    .table-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table-wrapper {
+        display: block;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .table-scrollable table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-scrollable thead {
+        display: none;
+    }
+
+    .table-scrollable tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table-scrollable tr {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 10px;
+        border: 3px solid #ddd; /* Remembered the updated border size */
+        border-radius: 5px;
+    }
+
+    .table-scrollable td {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        border: none;
+    }
+
+    .table-scrollable td::before {
+        content: attr(data-label);
+        flex-basis: 50%;
+        font-weight: bold;
+    }
+} /* Responsive card layout for query-table-container on small devices */
