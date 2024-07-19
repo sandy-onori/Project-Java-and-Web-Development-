@@ -18,7 +18,7 @@ The following components are required to be installed to access to be able to re
 1. Download and install the MySQL installer 8.0.38 from the [official website](https://dev.mysql.com/downloads/installer/).
 2. Run the installer and follow the prompts clicking on "Next". Then on "Finish" when the following prompt appears.
 
-If you have trouble installing MySQL, a detailed step by step guide is available in Section 3.4 of this document.
+If you have trouble installing MySQL, a detailed step by step guide, with IMAGES, is available in the folder uploaded with this project.
 
 1. Open the MySQL Workbench 8.0 CE (if not open automatically) and create a new connection by clicking on the "plus button" next to "MySQL Connections".
 2. Give a name to the connection you leave everything else as it is. Then click on Ok.
