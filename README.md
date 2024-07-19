@@ -52,7 +52,7 @@ To verify the correct installation open the Command Prompt and type the commands
 
 Now from the Command Prompt you need to change directory using the cd command and move inside the `myapp` folder uploaded with this project. For example if you extracted the myapp folder on the desktop the command will be: `cd %userprofile%\Desktop\myapp`
 
-Again from the Command Prompt run the command `npm install` to install all the dependencies listed in `package.json` file that inside the myapp folder.
+Again from the Command Prompt run the command `npm install` to install all the dependencies listed in `package.json` file that inside the node_modules folder.
 
 ## Starting the servers and browser
 
