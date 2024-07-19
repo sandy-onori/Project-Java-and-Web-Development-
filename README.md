@@ -4,7 +4,8 @@ DLBCSPJWD01
 
 # Installation Guide
 
-This document will quickly guide you into all the necessary steps to have access to my work. This guide refers only to the necessary setup on Microsoft Windows. For a detailed guide on other platforms please check [MySQL documentation](https://dev.mysql.com/doc/).
+This document will quickly guide you into all the necessary steps to have access to my work. 
+Remember to always start Command Prompt widows as Administrator!
 
 ## Prerequisites
 
