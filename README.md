@@ -35,6 +35,7 @@ Click on the connection to access the database:
 
 - Insert the password "1234". Then click Ok.
 
+For the sake of simplicity, let's assume you have downloaded the files in this repository and put them into a folder called `myapp`.
 Now we need to import the database using the Workbench. Click on the menu "Server" then select "Data import".
 
 - Select "Import from Self-Contained File" in the "Data import" tab that you just opened.
