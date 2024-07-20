@@ -51,13 +51,13 @@ You now have access to the imported database and your database server is running
 
 To verify the correct installation open the Command Prompt and type the commands `node -v` and `npm -v` to display the installed versions:
 
-Now from the Command Prompt you need to change directory using the cd command and move inside the `myapp` folder uploaded with this project. For example if you extracted the myapp folder on the desktop the command will be: `cd %userprofile%\Desktop\myapp`
+Now from the Command Prompt you need to change directory using the cd command and move inside the `myapp` folder uploaded with this project. For example if you extracted the myapp folder on the desktop the command will be: `cd %userprofile%\Desktop\myapp\node_modules`
 
 Again from the Command Prompt run the command `npm install` to install all the dependencies listed in `package.json` file that inside the node_modules folder.
 
 ## Starting the servers and browser
 
-From the Command Prompt remaining in the same directory you currently are (`...\myapp`) start the node.js Server by running the command `node server.js`
+From the Command Prompt, change directory to  `cd %userprofile%\Desktop\myapp` and start the node.js Server by running the command `node server.js`
 
 The node.js server is now running and ready to communicate with the web application.
 
