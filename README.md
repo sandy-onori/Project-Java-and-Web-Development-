@@ -38,7 +38,7 @@ Click on the connection to access the database:
 Now we need to import the database using the Workbench. Click on the menu "Server" then select "Data import".
 
 - Select "Import from Self-Contained File" in the "Data import" tab that you just opened.
-- Click on the 3 dots button and select the `.sql` file to import ("airbnb_db.sql").
+- Click on the 3 dots button and select the `airbnb_db.sql` file to import from the `...\myapp\sql` folder.
 - Click on the "Start Import" button.
 
 You now have access to the imported database and your database server is running.
