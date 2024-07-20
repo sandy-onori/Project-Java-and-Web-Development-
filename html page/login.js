@@ -59,7 +59,7 @@ document.getElementById('reset-button').addEventListener('click', function() {
         if (!message) {
             message = document.createElement('div');
             message.id = 'reset-message';
-            message.textContent = 'If the email address is valid, an email with the instructions to reset the password has been sent.';
+            message.textContent = 'Mock functionality: If the email address is valid, an email with the instructions to reset the password has been sent.';
             message.style.color = 'green';
             message.style.marginTop = '10px';
             this.parentNode.insertBefore(message, this);
