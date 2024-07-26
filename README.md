@@ -52,10 +52,9 @@ You now have access to the imported database and your database server is running
 
 To verify the correct installation open the Command Prompt and type the commands `node -v` and `npm -v` to display the installed versions:
 
-Now from the Command Prompt you need to change directory using the cd command and move inside the `myapp\node_modules` folder uploaded with this project. For example if you extracted the myapp folder on the desktop the command will be: `cd %userprofile%\Desktop\myapp\node_modules`
+Now from the Command Prompt you need to change directory using the cd command and move inside the `myapp` folder containing this project. For example if you extracted the `myapp` folder on the desktop the command will be: `cd %userprofile%\Desktop\myapp`
 
-Again from the Command Prompt run the command `npm install` to install all the dependencies listed in `package.json` file that inside the node_modules folder.
-If the installation is not successful, you can just extract the `node_modules.zip` file that will contain all the necessary files.
+Again from the Command Prompt run the command `npm install` to install all the dependencies listed in `package.json` file that inside the `myapp` folder.
 
 ## Starting the servers and browser
 
